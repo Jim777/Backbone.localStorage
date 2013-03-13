@@ -28,7 +28,7 @@ define([
         setView: function(options) {
             $.proxy(require(['views/'+options.name], function(View) {
                 if (this.view)
-                    this.view.unbind().remove();
+                    this.view.remove();
                 this.view = new View(options);
                 $('#todoapp').append(this.view.render().$el);
             }), this);
