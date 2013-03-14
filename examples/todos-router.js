@@ -5,7 +5,7 @@
 define([
     'jquery',
     'backbone'
-], function(_, Backbone) {
+], function($, Backbone) {
     return Backbone.Router.extend({
         // Hashtag routes and their handlers
         routes: {
