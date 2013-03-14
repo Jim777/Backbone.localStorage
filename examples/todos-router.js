@@ -7,12 +7,10 @@ define([
     'backbone'
 ], function(_, Backbone) {
     return Backbone.Router.extend({
+        // Hashtag routes and their handlers
         routes: {
-            // Hashtag routes and their handlers
             'todos': 'todos',
-
-            // default route, called on Router init
-            '': 'todos'
+            '': 'todos' // default route, called on Router init
         },
         todos: function() {
             this.setView({
@@ -20,8 +18,8 @@ define([
             });
             return this;
         },
+        // start Backbone Hashtag routing
         initialize: function(options) {
-            // start Backbone Hashtag routing
             Backbone.history.start();
             return this;
         },

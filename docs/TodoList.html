@@ -99,7 +99,7 @@ server.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>model: Todo,</pre></div></div>
+            <div class="content"><div class="highlight"><pre>        model: Todo,</pre></div></div>
             
         </li>
         
@@ -114,7 +114,7 @@ server.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>localStorage: <span class="keyword">new</span> Backbone.LocalStorage(<span class="string">"todos-backbone"</span>),</pre></div></div>
+            <div class="content"><div class="highlight"><pre>        localStorage: <span class="keyword">new</span> Backbone.LocalStorage(<span class="string">"todos-backbone"</span>),</pre></div></div>
             
         </li>
         
@@ -129,7 +129,7 @@ server.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>done: <span class="keyword">function</span>() {
+            <div class="content"><div class="highlight"><pre>        done: <span class="keyword">function</span>() {
             <span class="keyword">return</span> <span class="keyword">this</span>.filter(<span class="keyword">function</span>(todo){ <span class="keyword">return</span> todo.get(<span class="string">'done'</span>); });
         },</pre></div></div>
             
@@ -146,7 +146,7 @@ server.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>remaining: <span class="keyword">function</span>() {
+            <div class="content"><div class="highlight"><pre>        remaining: <span class="keyword">function</span>() {
             <span class="keyword">return</span> <span class="keyword">this</span>.without.apply(<span class="keyword">this</span>, <span class="keyword">this</span>.done());
         },</pre></div></div>
             
@@ -164,7 +164,7 @@ GUID in the database. This generates the next order number for new items.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>nextOrder: <span class="keyword">function</span>() {
+            <div class="content"><div class="highlight"><pre>        nextOrder: <span class="keyword">function</span>() {
             <span class="keyword">if</span> (!<span class="keyword">this</span>.length) <span class="keyword">return</span> <span class="number">1</span>;
             <span class="keyword">return</span> <span class="keyword">this</span>.last().get(<span class="string">'order'</span>) + <span class="number">1</span>;
         },</pre></div></div>
@@ -182,7 +182,7 @@ GUID in the database. This generates the next order number for new items.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>comparator: <span class="keyword">function</span>(todo) {
+            <div class="content"><div class="highlight"><pre>        comparator: <span class="keyword">function</span>(todo) {
             <span class="keyword">return</span> todo.get(<span class="string">'order'</span>) || <span class="keyword">this</span>.nextOrder();
         }
 

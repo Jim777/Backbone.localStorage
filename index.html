@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Backbone Todo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Backbone Todo App</h1>
+      <p>
+        This is a fork of Jérôme Gravel-Niquet's example <a href="http://backbonejs.org/docs/todos.html">todo app</a> with these changes:<br />
+        <ul>
+          <li>each Model, View, Collection, and template in a separate file</li>
+          <li>no longer defining models, collections, and views in the global window namespace</li>
+          <li>Backbone.Router replaces AppView as the global app</li>
+          <li>templates included using RequireJS text.js plugin</li>
+        </ul>
+      </p>
+      <p>
+        Try the <a href="examples/index.html">example app</a> or read the annotated source code:<br />
+        <ul>
+          <li><a href="docs/todos-main.html">todos-main.js</a></li>
+          <li><a href="docs/todos-router.html">todos-router.js</a></li>
+          <li>
+            models/
+            <ul>
+              <li><a href="docs/TodoList.html">TodoList.js</a></li>
+              <li><a href="docs/Todo.html">Todo.js</a></li>
+            </ul>
+          </li>
+          <li>
+            views/
+            <ul>
+              <li><a href="docs/TodoListView.html">TodoListView.js</a></li>
+              <li><a href="docs/TodoView.html">TodoView.js</a></li>
+            </ul>
+          </li>
+          <li>
+            templates/
+            <ul>
+              <li><a href="examples/templates/todo-list.html">todo-list.html</a></li>
+              <li><a href="examples/templates/todo.html">todo.html</a></li>
+              <li><a href="examples/templates/stats.html">stats.html</a></li>
+            </ul>
+          </li>
+          <li>
+            libs/
+            <ul>
+              <li><a href="http://requirejs.org/">require.js</a></li>
+              <li><a href="http://underscorejs.org/">underscore.js</a></li>
+              <li><a href="http://jquery.com/">jquery.js</a></li>
+              <li><a href="http://backbonejs.org/">backbone.js</a></li>
+              <li><a href="http://requirejs.org/docs/download.html#text">text.js</a></li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </div>
+  </body>
+</html>

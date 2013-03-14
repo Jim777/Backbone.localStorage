@@ -77,7 +77,7 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-3">&#182;</a>
               </div>
-              <p>Our basic <strong>Todo</strong> model has <code>title</code>, <code>order</code>, and <code>done</code> attributes.</p>
+              <p>Our basic <strong>Todo</strong> model has <code>title</code> and <code>done</code> attributes.</p>
 
             </div>
             
@@ -96,7 +96,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>defaults: <span class="keyword">function</span>() {
+            <div class="content"><div class="highlight"><pre>        defaults: <span class="keyword">function</span>() {
             <span class="keyword">return</span> {
                 title: <span class="string">"empty todo..."</span>,</pre></div></div>
             
@@ -113,7 +113,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>done: <span class="literal">false</span>
+            <div class="content"><div class="highlight"><pre>        done: <span class="literal">false</span>
             };
         },</pre></div></div>
             
@@ -130,7 +130,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>initialize: <span class="keyword">function</span>() {
+            <div class="content"><div class="highlight"><pre>        initialize: <span class="keyword">function</span>() {
             <span class="keyword">if</span> (!<span class="keyword">this</span>.get(<span class="string">"title"</span>)) {
                 <span class="keyword">this</span>.set({<span class="string">"title"</span>: <span class="keyword">this</span>.defaults().title});
             }
@@ -149,7 +149,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>toggle: <span class="keyword">function</span>() {
+            <div class="content"><div class="highlight"><pre>        toggle: <span class="keyword">function</span>() {
             <span class="keyword">this</span>.save({done: !<span class="keyword">this</span>.get(<span class="string">"done"</span>)});
         }
 

@@ -76,7 +76,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>template: _.template(todoListHtml),</pre></div></div>
+            <div class="content"><div class="highlight"><pre>        template: _.template(todoListHtml),</pre></div></div>
             
         </li>
         
@@ -91,7 +91,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>statsTemplate: _.template(statsHtml),</pre></div></div>
+            <div class="content"><div class="highlight"><pre>        statsTemplate: _.template(statsHtml),</pre></div></div>
             
         </li>
         
@@ -106,7 +106,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>events: {
+            <div class="content"><div class="highlight"><pre>        events: {
             <span class="string">"keypress #new-todo"</span>:  <span class="string">"createOnEnter"</span>,
             <span class="string">"click #clear-completed"</span>: <span class="string">"clearCompleted"</span>,
             <span class="string">"click #toggle-all"</span>: <span class="string">"toggleAllComplete"</span>
@@ -127,7 +127,7 @@ loading any preexisting todos that might be saved in <em>localStorage</em>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>initialize: <span class="keyword">function</span>(options) {</pre></div></div>
+            <div class="content"><div class="highlight"><pre>        initialize: <span class="keyword">function</span>(options) {</pre></div></div>
             
         </li>
         
@@ -142,7 +142,7 @@ loading any preexisting todos that might be saved in <em>localStorage</em>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre><span class="keyword">this</span>.Todos = <span class="keyword">new</span> TodoList();
+            <div class="content"><div class="highlight"><pre>        <span class="keyword">this</span>.Todos = <span class="keyword">new</span> TodoList();
 
             <span class="keyword">this</span>.Todos.on(<span class="string">'add'</span>, <span class="keyword">this</span>.addOne, <span class="keyword">this</span>);
             <span class="keyword">this</span>.Todos.on(<span class="string">'reset'</span>, <span class="keyword">this</span>.addAll, <span class="keyword">this</span>);
@@ -161,7 +161,7 @@ loading any preexisting todos that might be saved in <em>localStorage</em>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre><span class="keyword">this</span>.$el.html(<span class="keyword">this</span>.template({}));
+            <div class="content"><div class="highlight"><pre>        <span class="keyword">this</span>.$el.html(<span class="keyword">this</span>.template({}));
 
             <span class="keyword">this</span>.Todos.fetch();
 
@@ -182,7 +182,7 @@ of the app doesn&#39;t change.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>render: <span class="keyword">function</span>() {
+            <div class="content"><div class="highlight"><pre>        render: <span class="keyword">function</span>() {
 
             <span class="keyword">var</span> done = <span class="keyword">this</span>.Todos.done().length;
             <span class="keyword">var</span> remaining = <span class="keyword">this</span>.Todos.remaining().length;
@@ -214,7 +214,7 @@ appending its element to the <code>&lt;ul&gt;</code>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>addOne: <span class="keyword">function</span>(todo) {
+            <div class="content"><div class="highlight"><pre>        addOne: <span class="keyword">function</span>(todo) {
             <span class="keyword">var</span> view = <span class="keyword">new</span> TodoView({model: todo});
             <span class="keyword">this</span>.$el.find(<span class="string">"#todo-list"</span>).append(view.render().$el);
             <span class="keyword">return</span> <span class="keyword">this</span>;
@@ -233,7 +233,7 @@ appending its element to the <code>&lt;ul&gt;</code>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>addAll: <span class="keyword">function</span>() {
+            <div class="content"><div class="highlight"><pre>        addAll: <span class="keyword">function</span>() {
             <span class="keyword">this</span>.Todos.each(<span class="keyword">this</span>.addOne, <span class="keyword">this</span>);
             <span class="keyword">return</span> <span class="keyword">this</span>;
         },</pre></div></div>
@@ -252,7 +252,7 @@ persisting it to <em>localStorage</em>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>createOnEnter: <span class="keyword">function</span>(e) {
+            <div class="content"><div class="highlight"><pre>        createOnEnter: <span class="keyword">function</span>(e) {
             <span class="keyword">if</span> (e.keyCode != <span class="number">13</span>) <span class="keyword">return</span>;
             <span class="keyword">if</span> (!<span class="keyword">this</span>.$el.find(<span class="string">"#new-todo"</span>).val()) <span class="keyword">return</span>;
 
@@ -274,7 +274,7 @@ persisting it to <em>localStorage</em>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>clearCompleted: <span class="keyword">function</span>() {
+            <div class="content"><div class="highlight"><pre>        clearCompleted: <span class="keyword">function</span>() {
             _.invoke(<span class="keyword">this</span>.Todos.done(), <span class="string">'destroy'</span>);
             <span class="keyword">return</span> <span class="literal">false</span>;
         },

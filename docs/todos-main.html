@@ -11,27 +11,6 @@
   <div id="container">
     <div id="background"></div>
     
-      <ul id="jump_to">
-        <li>
-          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
-          <a class="small" href="javascript:void(0);">+</a>
-          <div id="jump_wrapper">
-          <div id="jump_page">
-            
-              
-              <a class="source" href="todos-main.html">
-                todos-main.js
-              </a>
-            
-              
-              <a class="source" href="todos-router.html">
-                todos-router.js
-              </a>
-            
-          </div>
-        </li>
-      </ul>
-    
     <ul class="sections">
         
           <li id="title">
@@ -67,11 +46,10 @@
             
             <div class="content"><div class="highlight"><pre>require.config({
     paths: {
-        <span class="string">'libs'</span>: <span class="string">'../spec/support'</span>,
-        <span class="string">'jquery'</span>: <span class="string">'../spec/support/jquery'</span>,
-        <span class="string">'underscore'</span>: <span class="string">'../spec/support/underscore'</span>,
-        <span class="string">'backbone'</span>: <span class="string">'../spec/support/backbone'</span>,
-        <span class="string">'backbone.localStorage'</span>: <span class="string">'../backbone.localStorage'</span>,
+        <span class="string">'jquery'</span>: <span class="string">'libs/jquery'</span>,
+        <span class="string">'underscore'</span>: <span class="string">'libs/underscore'</span>,
+        <span class="string">'backbone'</span>: <span class="string">'libs/backbone'</span>,
+        <span class="string">'backbone.localStorage'</span>: <span class="string">'libs/backbone.localStorage'</span>,
     },
     shim: {
         <span class="string">'jquery'</span>: {
@@ -121,7 +99,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>window.app = <span class="keyword">new</span> TodosRouter();
+            <div class="content"><div class="highlight"><pre>    window.app = <span class="keyword">new</span> TodosRouter();
 });</pre></div></div>
             
         </li>
