@@ -4,10 +4,11 @@
 // Here we setup path aliases and dependencies
 require.config({
     paths: {
-        'libs': 'spec/support',
-        'jquery': 'spec/support/jquery',
-        'underscore': 'spec/support/underscore',
-        'backbone': 'spec/support/backbone',
+        'libs': '../spec/support',
+        'jquery': '../spec/support/jquery',
+        'underscore': '../spec/support/underscore',
+        'backbone': '../spec/support/backbone',
+        'backbone.localStorage': '../backbone.localStorage',
     },
     shim: {
         'jquery': {
