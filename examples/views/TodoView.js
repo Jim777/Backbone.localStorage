@@ -65,7 +65,8 @@ define([
 
         // If you hit `enter`, we're through editing the item.
         updateOnEnter: function(e) {
-            if (e.keyCode == 13) this.close();
+            if (e.keyCode == 13)
+                this.close();
             return this;
         },
 

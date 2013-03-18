@@ -11,27 +11,6 @@
   <div id="container">
     <div id="background"></div>
     
-      <ul id="jump_to">
-        <li>
-          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
-          <a class="small" href="javascript:void(0);">+</a>
-          <div id="jump_wrapper">
-          <div id="jump_page">
-            
-              
-              <a class="source" href="TodoListView.html">
-                TodoListView.js
-              </a>
-            
-              
-              <a class="source" href="TodoView.html">
-                TodoView.js
-              </a>
-            
-          </div>
-        </li>
-      </ul>
-    
     <ul class="sections">
         
           <li id="title">
@@ -51,7 +30,7 @@
               
             </div>
             
-            <div class="content"><div class="highlight"><pre>define([
+            <div class="content"><div class='highlight'><pre>define([
     <span class="string">'jquery'</span>,
     <span class="string">'underscore'</span>,
     <span class="string">'backbone'</span>,
@@ -68,11 +47,11 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <p>This is a list tag.</p>
+              <p>... is a list tag.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        tagName:  <span class="string">"li"</span>,</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        tagName:  <span class="string">"li"</span>,</pre></div></div>
             
         </li>
         
@@ -87,7 +66,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        template: _.template(todoHtml),</pre></div></div>
+            <div class="content"><div class='highlight'><pre>        template: _.template(todoHtml),</pre></div></div>
             
         </li>
         
@@ -102,7 +81,7 @@
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        events: {
+            <div class="content"><div class='highlight'><pre>        events: {
             <span class="string">"click .toggle"</span>   : <span class="string">"toggleDone"</span>,
             <span class="string">"dblclick .view"</span>  : <span class="string">"edit"</span>,
             <span class="string">"click a.destroy"</span> : <span class="string">"clear"</span>,
@@ -125,7 +104,7 @@ app, we set a direct reference on the model for convenience.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        initialize: <span class="keyword">function</span>(options) {
+            <div class="content"><div class='highlight'><pre>        initialize: <span class="keyword">function</span>(options) {
             <span class="keyword">this</span>.model.on(<span class="string">'change'</span>, <span class="keyword">this</span>.render, <span class="keyword">this</span>);
             <span class="keyword">this</span>.model.on(<span class="string">'destroy'</span>, <span class="keyword">this</span>.remove, <span class="keyword">this</span>);
             <span class="keyword">return</span> <span class="keyword">this</span>;
@@ -144,7 +123,7 @@ app, we set a direct reference on the model for convenience.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        render: <span class="keyword">function</span>() {
+            <div class="content"><div class='highlight'><pre>        render: <span class="keyword">function</span>() {
             <span class="keyword">this</span>.$el.html(<span class="keyword">this</span>.template(<span class="keyword">this</span>.model.toJSON()));
             <span class="keyword">this</span>.$el.toggleClass(<span class="string">'done'</span>, <span class="keyword">this</span>.model.get(<span class="string">'done'</span>));
             <span class="keyword">this</span>.input = <span class="keyword">this</span>.$el.find(<span class="string">'.edit'</span>);
@@ -164,8 +143,8 @@ app, we set a direct reference on the model for convenience.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        toggleDone: <span class="keyword">function</span>() {
-            <span class="keyword">this</span>.model.toggle();
+            <div class="content"><div class='highlight'><pre>        toggleDone: <span class="keyword">function</span>() {
+            <span class="keyword">this</span>.model.save({done: !<span class="keyword">this</span>.model.get(<span class="string">'done'</span>)});
             <span class="keyword">return</span> <span class="keyword">this</span>;
         },</pre></div></div>
             
@@ -182,7 +161,7 @@ app, we set a direct reference on the model for convenience.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        edit: <span class="keyword">function</span>() {
+            <div class="content"><div class='highlight'><pre>        edit: <span class="keyword">function</span>() {
             <span class="keyword">this</span>.$el.addClass(<span class="string">"editing"</span>);
             <span class="keyword">this</span>.input.focus();
             <span class="keyword">return</span> <span class="keyword">this</span>;
@@ -201,7 +180,7 @@ app, we set a direct reference on the model for convenience.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        close: <span class="keyword">function</span>() {
+            <div class="content"><div class='highlight'><pre>        close: <span class="keyword">function</span>() {
             <span class="keyword">var</span> value = <span class="keyword">this</span>.input.val();
             <span class="keyword">if</span> (!value) {
               <span class="keyword">this</span>.clear();
@@ -225,8 +204,9 @@ app, we set a direct reference on the model for convenience.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        updateOnEnter: <span class="keyword">function</span>(e) {
-            <span class="keyword">if</span> (e.keyCode == <span class="number">13</span>) <span class="keyword">this</span>.close();
+            <div class="content"><div class='highlight'><pre>        updateOnEnter: <span class="keyword">function</span>(e) {
+            <span class="keyword">if</span> (e.keyCode == <span class="number">13</span>)
+                <span class="keyword">this</span>.close();
             <span class="keyword">return</span> <span class="keyword">this</span>;
         },</pre></div></div>
             
@@ -243,7 +223,7 @@ app, we set a direct reference on the model for convenience.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        clear: <span class="keyword">function</span>() {
+            <div class="content"><div class='highlight'><pre>        clear: <span class="keyword">function</span>() {
             <span class="keyword">this</span>.model.destroy();
             <span class="keyword">return</span> <span class="keyword">this</span>;
         }
