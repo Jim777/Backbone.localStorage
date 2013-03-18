@@ -40,7 +40,7 @@ define([
 
         // Toggle the `"done"` state of the model.
         toggleDone: function() {
-            this.model.save({done: !this.get('done')});
+            this.model.save({done: !this.model.get('done')});
             return this;
         },
 
