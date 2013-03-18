@@ -83,7 +83,9 @@ define([
             if (e.keyCode != 13) return;
             if (!this.$el.find("#new-todo").val()) return;
 
-            this.Todos.create({title: this.$el.find("#new-todo").val()});
+            var Model = Backbone.Model.extend({}); // extend an anonymous Backbone.Model
+            var model = new Model({title: this.$el.find("#new-todo").val()}); // create a new Model with this todo's data
+            this.Todos.add(model); // add anonymous model to our Todos collection
             this.$el.find("#new-todo").val('');
             return this;
         },
