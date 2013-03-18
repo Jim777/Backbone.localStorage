@@ -2,12 +2,12 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'models/TodoList',
+    'collections/TodoCollection',
     'views/TodoView',
     'libs/text!templates/todo-list.html',
     'libs/text!templates/stats.html',
     'backbone.localStorage'
-], function($, _, Backbone, TodoList, TodoView, todoListHtml, statsHtml) {
+], function($, _, Backbone, TodoCollection, TodoView, todoListHtml, statsHtml) {
     return Backbone.View.extend({
 
         // Our template for the list of todos
@@ -22,14 +22,14 @@ define([
             "click #clear-completed": "clearCompleted",
             "click #toggle-all": "toggleAllComplete"
         },
-        
+
         // At initialization we bind to the relevant events on the `Todos`
         // collection, when items are added or changed. Kick things off by
         // loading any preexisting todos that might be saved in *localStorage*.
         initialize: function(options) {
 
             // Create our global collection of **Todos**.
-            this.Todos = new TodoList();
+            this.Todos = new TodoCollection();
 
             this.Todos.on('add', this.addOne, this);
             this.Todos.on('reset', this.addAll, this);
