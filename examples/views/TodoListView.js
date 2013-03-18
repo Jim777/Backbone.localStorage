@@ -82,8 +82,7 @@ define([
         createOnEnter: function(e) {
             if (e.keyCode != 13) return;
             if (!this.$el.find("#new-todo").val()) return;
-
-            this.Todos.create({title: this.$el.find("#new-todo").val()});
+            this.Todos.create({title: this.$el.find("#new-todo").val(),done:false}); // sync new model and add to our Todos collection
             this.$el.find("#new-todo").val('');
             return this;
         },

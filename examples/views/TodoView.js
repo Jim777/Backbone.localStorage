@@ -40,7 +40,7 @@ define([
 
         // Toggle the `"done"` state of the model.
         toggleDone: function() {
-            this.model.toggle();
+            this.model.save({done: !this.model.get('done')});
             return this;
         },
 
@@ -65,7 +65,8 @@ define([
 
         // If you hit `enter`, we're through editing the item.
         updateOnEnter: function(e) {
-            if (e.keyCode == 13) this.close();
+            if (e.keyCode == 13)
+                this.close();
             return this;
         },
 

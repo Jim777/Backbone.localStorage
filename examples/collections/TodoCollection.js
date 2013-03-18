@@ -11,6 +11,9 @@ define([
     return Backbone.Collection.extend({
 
         // Save all of the todo items under the `"todos-backbone"` namespace.
+        // For most web apps we would instead use the `"url"` attribute to
+        // set an api resource instead of HTML5 localStorage. For example:
+        // url: '/api/v1/todos',
         localStorage: new Backbone.LocalStorage("todos-backbone"),
 
         // Filter down the list of all todo items that are finished.
