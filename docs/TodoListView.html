@@ -55,12 +55,12 @@
     <span class="string">'jquery'</span>,
     <span class="string">'underscore'</span>,
     <span class="string">'backbone'</span>,
-    <span class="string">'models/TodoList'</span>,
+    <span class="string">'collections/TodoCollection'</span>,
     <span class="string">'views/TodoView'</span>,
     <span class="string">'libs/text!templates/todo-list.html'</span>,
     <span class="string">'libs/text!templates/stats.html'</span>,
     <span class="string">'backbone.localStorage'</span>
-], <span class="keyword">function</span>($, _, Backbone, TodoList, TodoView, todoListHtml, statsHtml) {
+], <span class="keyword">function</span>($, _, Backbone, TodoCollection, TodoView, todoListHtml, statsHtml) {
     <span class="keyword">return</span> Backbone.View.extend({</pre></div></div>
             
         </li>
@@ -142,7 +142,7 @@ loading any preexisting todos that might be saved in <em>localStorage</em>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        <span class="keyword">this</span>.Todos = <span class="keyword">new</span> TodoList();
+            <div class="content"><div class="highlight"><pre>        <span class="keyword">this</span>.Todos = <span class="keyword">new</span> TodoCollection();
 
             <span class="keyword">this</span>.Todos.on(<span class="string">'add'</span>, <span class="keyword">this</span>.addOne, <span class="keyword">this</span>);
             <span class="keyword">this</span>.Todos.on(<span class="string">'reset'</span>, <span class="keyword">this</span>.addAll, <span class="keyword">this</span>);
