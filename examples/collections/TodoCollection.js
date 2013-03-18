@@ -1,8 +1,7 @@
 define([
     'backbone',
-    'models/Todo',
     'backbone.localStorage'
-], function(Backbone, Todo) {
+], function(Backbone) {
 
     // Todo Collection
     // ---------------
@@ -10,9 +9,6 @@ define([
     // The collection of todos is backed by *localStorage* instead of a remote
     // server.
     return Backbone.Collection.extend({
-
-        // Reference to this collection's model.
-        model: Todo,
 
         // Save all of the todo items under the `"todos-backbone"` namespace.
         localStorage: new Backbone.LocalStorage("todos-backbone"),

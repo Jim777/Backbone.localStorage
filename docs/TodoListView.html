@@ -142,7 +142,7 @@ loading any preexisting todos that might be saved in <em>localStorage</em>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        <span class="keyword">this</span>.Todos = <span class="keyword">new</span> TodoCollection();
+            <div class="content"><div class="highlight"><pre>            <span class="keyword">this</span>.Todos = <span class="keyword">new</span> TodoCollection();
 
             <span class="keyword">this</span>.Todos.on(<span class="string">'add'</span>, <span class="keyword">this</span>.addOne, <span class="keyword">this</span>);
             <span class="keyword">this</span>.Todos.on(<span class="string">'reset'</span>, <span class="keyword">this</span>.addAll, <span class="keyword">this</span>);
@@ -161,7 +161,7 @@ loading any preexisting todos that might be saved in <em>localStorage</em>.</p>
 
             </div>
             
-            <div class="content"><div class="highlight"><pre>        <span class="keyword">this</span>.$el.html(<span class="keyword">this</span>.template({}));
+            <div class="content"><div class="highlight"><pre>            <span class="keyword">this</span>.$el.html(<span class="keyword">this</span>.template({}));
 
             <span class="keyword">this</span>.Todos.fetch();
 
