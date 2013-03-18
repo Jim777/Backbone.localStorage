@@ -53,9 +53,8 @@
             
             <div class="content"><div class="highlight"><pre>define([
     <span class="string">'backbone'</span>,
-    <span class="string">'models/Todo'</span>,
     <span class="string">'backbone.localStorage'</span>
-], <span class="keyword">function</span>(Backbone, Todo) {</pre></div></div>
+], <span class="keyword">function</span>(Backbone) {</pre></div></div>
             
         </li>
         
@@ -95,21 +94,6 @@ server.</p>
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-4">&#182;</a>
               </div>
-              <p>Reference to this collection&#39;s model.</p>
-
-            </div>
-            
-            <div class="content"><div class="highlight"><pre>model: Todo,</pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-5">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-5">&#182;</a>
-              </div>
               <p>Save all of the todo items under the <code>&quot;todos-backbone&quot;</code> namespace.</p>
 
             </div>
@@ -119,11 +103,11 @@ server.</p>
         </li>
         
         
-        <li id="section-6">
+        <li id="section-5">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-6">&#182;</a>
+                <a class="pilcrow" href="#section-5">&#182;</a>
               </div>
               <p>Filter down the list of all todo items that are finished.</p>
 
@@ -136,11 +120,11 @@ server.</p>
         </li>
         
         
-        <li id="section-7">
+        <li id="section-6">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-7">&#182;</a>
+                <a class="pilcrow" href="#section-6">&#182;</a>
               </div>
               <p>Filter down the list to only todo items that are still not finished.</p>
 
@@ -153,11 +137,11 @@ server.</p>
         </li>
         
         
-        <li id="section-8">
+        <li id="section-7">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-8">&#182;</a>
+                <a class="pilcrow" href="#section-7">&#182;</a>
               </div>
               <p>We keep the Todos in sequential order, despite being saved by unordered
 GUID in the database. This generates the next order number for new items.</p>
@@ -172,11 +156,11 @@ GUID in the database. This generates the next order number for new items.</p>
         </li>
         
         
-        <li id="section-9">
+        <li id="section-8">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-9">&#182;</a>
+                <a class="pilcrow" href="#section-8">&#182;</a>
               </div>
               <p>Todos are sorted by their original insertion order.</p>
 
