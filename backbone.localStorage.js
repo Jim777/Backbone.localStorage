@@ -162,11 +162,7 @@ Backbone.LocalStorage.sync = window.Store.sync = Backbone.localSync = function(m
   if (resp) {
     model.trigger("sync", model, resp, options);
     if (options && options.success)
-      if (Backbone.VERSION === "0.9.10") {
-        options.success(model, resp, options);
-      } else {
-        options.success(resp);
-      }
+      options.success(resp);
     if (syncDfd)
       syncDfd.resolve(resp);
 
@@ -176,12 +172,7 @@ Backbone.LocalStorage.sync = window.Store.sync = Backbone.localSync = function(m
 
     model.trigger("error", model, errorMessage, options);
     if (options && options.error)
-      if (Backbone.VERSION === "0.9.10") {
-        options.error(model, errorMessage, options);
-      } else {
-        options.error(errorMessage);
-      }
-
+      options.error(errorMessage);
     if (syncDfd)
       syncDfd.reject(errorMessage);
   }
