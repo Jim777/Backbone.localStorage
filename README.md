@@ -1,3 +1,9 @@
+# Backbone ToDo App Example using Require.js (AMD)
+
+http://ahamlett.com/Backbone.localStorage
+
+Note: The below content is for the Backbone.localStorage extension. Click the above link for the ToDo example.
+
 # Backbone localStorage Adapter v1.1.0
 
 [![Build Status](https://secure.travis-ci.org/jeromegn/Backbone.localStorage.png?branch=master)](http://travis-ci.org/jeromegn/Backbone.localStorage)
